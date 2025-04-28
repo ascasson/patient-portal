@@ -1,0 +1,18 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Report {
+  id          String   @id @default(cuid())
+  patientName String   @db.VarChar(255)
+  date        DateTime
+  summary     String   @db.Text
+
+  @@index([patientName])
+  @@index([date])
+}
