@@ -25,7 +25,6 @@ describe('GET /reports', () => {
     });
 
     expect(response.statusCode).toBe(200);
-    console.log('response: ', response.payload)
     const data = JSON.parse(response.payload);
     expect(Array.isArray(data)).toBe(true);
   });
