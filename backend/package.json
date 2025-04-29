@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "test": "jest",
     "start": "prisma generate && npm run build:ts && fastify start -l info dist/app.js",
     "build:ts": "tsc",
     "watch:ts": "tsc -w",
@@ -29,11 +30,15 @@
     "fastify-plugin": "^5.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.1.0",
     "c8": "^10.1.2",
     "concurrently": "^9.0.0",
     "fastify-tsconfig": "^3.0.0",
+    "jest": "^29.7.0",
     "prisma": "^6.6.0",
+    "supertest": "^7.1.0",
+    "ts-jest": "^29.3.2",
     "ts-node": "^10.4.0",
     "typescript": "~5.8.2"
   },
