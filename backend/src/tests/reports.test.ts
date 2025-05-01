@@ -1,11 +1,11 @@
-import Fastify from 'fastify';
+import Fastify, { FastifyInstance } from 'fastify';
 import app from '../app';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
 describe('GET /reports', () => {
-  let fastify;
+  let fastify: FastifyInstance;
 
   beforeAll(async () => {
     fastify = Fastify();

@@ -13,9 +13,6 @@ coverage/
 # Ignore temporary files
 *.tmp
 
-# Ignore Prisma migrations (optional, if not needed in the image)
-prisma/migrations/
-
 # Ignore test coverage data
 coverage/
 
