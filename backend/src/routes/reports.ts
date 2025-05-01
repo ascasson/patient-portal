@@ -20,10 +20,16 @@ const reportsRoute: FastifyPluginAsync = async (fastify) => {
       },
     },
     async (request, reply) => {
-      const { patientName } = request.query as Query;
-      fastify.log.info({ filter: patientName ?? null }, 'Fetching reports');
-      const list = await getReports(fastify.prisma, patientName);
-      return list;
+      try {
+        const { patientName } = request.query as Query;
+        fastify.log.info({ filter: patientName ?? null }, 'Fetching reports');
+        const list = await getReports(fastify.prisma, patientName);
+        return list;
+      } catch (error) {
+        fastify.log.error(error, 'Error fetching reports');
+        reply.status(500).send({ error: 'Internal Server Error' });
+      }
+
     }
   );
 };
