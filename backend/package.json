@@ -14,7 +14,8 @@
     "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
     "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js",
     "seed-demo": "ts-node --compiler-options '{\"module\":\"commonjs\"}' prisma/seed.ts",
-    "docker:start": "docker-compose up --build"
+    "docker:start": "docker-compose up --build",
+    "docker:clear": "docker-compose down --rmi all -v"
   },
   "keywords": [],
   "author": "",
