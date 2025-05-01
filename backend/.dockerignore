@@ -1,0 +1,32 @@
+# Ignore node_modules
+node_modules
+
+# Ignore logs
+*.log
+
+# Ignore coverage reports
+coverage/
+
+# Ignore environment files
+.env
+
+# Ignore temporary files
+*.tmp
+
+# Ignore test coverage data
+coverage/
+
+# Ignore local database files
+*.db
+
+# Ignore Docker-related files
+Dockerfile
+docker-compose.yml
+
+# Ignore IDE/editor config files
+.vscode/
+.idea/
+*.swp
+
+# Ignore macOS system files
+.DS_Store

@@ -17,7 +17,7 @@
 
     <div class="content">
       <div v-if="error" class="error">
-        💥 Error: {{ error.message }}
+        Error: {{ error.message }}
       </div>
       <ul>
         <li v-if="!reports.length && !loading">
